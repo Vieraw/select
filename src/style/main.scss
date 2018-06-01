@@ -1,0 +1,65 @@
+.select-box
+{
+  position: relative;
+  display: inline-block;
+  margin: 0.1em;
+  padding: 0.5em;
+
+  background: white;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  cursor: pointer;
+
+  font: 400 12px 'Tahoma';
+}
+.select-box__label:after
+{
+  position: absolute;
+  content: "";
+  right: 5px;
+  top: 30%;
+  transform-origin: 0 0;
+  transform: rotate(45deg) translateY(-50%);
+  border: #787878 solid;
+  padding: 4px;
+  border-width: 0 2px 2px 0;
+}
+.select-box__label_open:after
+{
+  top: 70%;
+  transform: rotate(-135deg) translateX(-50%);
+}
+
+.select-box__list
+{
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+
+  background: white;
+  border-radius: 5px;
+  list-style: none;
+
+  transition: 0.3s;
+}
+
+.select-box__list_active
+{
+  border: 1px solid darkgray;
+}
+
+
+.select-box__list__option
+{
+  padding: 0.5em;
+}
+.select-box__list__option:hover
+{
+  background: yellow;
+}
+
